@@ -1,0 +1,24 @@
+.hero {
+  color: $white-color-200;
+  background: $primary-color-500;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid #000000;
+
+  &--content {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &--title {
+    font-size: 42px;
+    margin-bottom: 1rem;
+  }
+
+  &--subtitle {
+    font-size: 1.2rem;
+  }
+}
