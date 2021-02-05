@@ -9,13 +9,13 @@ import Todo from "../components/todo";
 
 const IndexPage = ({ data }) => {
 
-  // <h2>{data.sanityProject.name}</h2>
+  const { sanityHero, allSanityProject } = data;
 
   return (
     <Layout>
-      <SEO title="Home" />
-      <Hero />
-      <Projects />
+      <SEO title="Portfolio" />
+      <Hero hero={sanityHero} />
+      <Projects projects={allSanityProject} />
       <Todo />
     </Layout>
   )
@@ -26,9 +26,18 @@ export default IndexPage
 
 export const query = graphql`
 query MyQuery {
-  sanityProject {
-    name
+  allSanityProject {
+    edges {
+      node {
+        id
+        name
+        description
+      }
+    }
+  }
+  sanityHero {
+    title
+    description
   }
 }
-
 `

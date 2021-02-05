@@ -11,7 +11,20 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'string'
+      type: 'text'
+    },
+    {
+      name: 'tool',
+      title: 'Tools',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [
+            { type: 'tool' }
+          ]
+        }
+      ]
     }
   ]
 }
