@@ -8,7 +8,6 @@ const todo = () => {
         <li>Connect GraphQL and Sanity for the stuff I need. </li>
         <li>Tidy up the <code>scss/base/_base.scss</code>  file</li>
         <li>Delete this when finished</li>
-        <li>fooo</li>
       </ul>
     </div>
   )
