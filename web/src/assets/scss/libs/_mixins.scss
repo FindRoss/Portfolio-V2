@@ -1,0 +1,29 @@
+// Breakpoints.
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin fromTablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+// Not sure I need a mobile.
+// @mixin mobile {
+//   @media (min-width: #{$mobile-width}) {
+//     @content;
+//   }
+// }
+
+// Not sure why I need a rule only for table.
+// @mixin tablet {
+//   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+//     @content;
+//   }
+// }

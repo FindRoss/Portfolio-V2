@@ -1,31 +1,39 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from "prop-types";
 
-const project = (name, description) => (
-  <div className="project">
-    <h3 className="project--title">{name || 'no name'}</h3>
-    <p className="project--description">{description || 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.'}</p>
+const project = (p) => (
+  <div className="project" key={p}>
+    <h3 className="project--title">{p.name || 'no name'}</h3>
+    <p className="project--description">{p.description || 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.'}</p>
     <a href="http://google.com" target="_blank" rel="noreferrer" className="project--link">Lorem</a>
   </div>
 )
 
-const projects = ({ projects }) => {
+const Projects = ({ projects: { edges: allProjects } }) => {
 
-  const allProjects = projects.edges;
+  // Learning destructuring.
+  // const allProjects = projects.edges;
+  // const { edges: allProjects } = projects;
+  // { projects: { edges: allProjects  } }
 
   return (
     <div className="cont">
-      {console.log(allProjects)}
       <div className="projects">
         <div className="project--col-heading">
           <h2>Projects</h2>
         </div>
         <div className="projects--col-list">
-          {allProjects.map(p => project(p.node.name, p.node.description))}
+          {allProjects.map(p => project(p.node))}
         </div>
       </div>
     </div>
   )
 }
 
+export default Projects;
 
-export default projects; 
+Projects.propTypes = {
+  projects: PropTypes.shape({
+    edges: PropTypes.array
+  })
+}

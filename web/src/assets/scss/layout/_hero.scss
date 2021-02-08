@@ -11,14 +11,38 @@
     max-width: 550px;
     margin: 0 auto;
     text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include fromTablet {
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
   }
 
   &--title {
-    font-size: 42px;
+    font-size: 30px;
+    position: relative;
+    padding-bottom: 2rem;
     margin-bottom: 1rem;
+
+    &::after {
+      content: " ";
+      left: 50%;
+      transform: translateX(-50%);
+      width: 55px;
+      height: 6px;
+      background: $secondary-color-500;
+      position: absolute;
+      bottom: 0;
+    }
+
+    @include fromTablet {
+      font-size: 42px;
+    }
   }
 
   &--subtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }

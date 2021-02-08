@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const hero = ({ hero }) => (
+const Hero = ({ hero }) => (
   <div className="hero">
     {console.log(hero)}
     <div className="hero--content">
@@ -11,9 +11,11 @@ const hero = ({ hero }) => (
   </div>
 );
 
-export default hero;
+export default Hero;
 
-hero.propTypes = {
-  [hero.title]: PropTypes.string,
-  [hero.description]: PropTypes.string,
+Hero.propTypes = {
+  hero: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string
+  })
 }

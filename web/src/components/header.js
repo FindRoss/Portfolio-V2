@@ -1,5 +1,5 @@
-import PropTypes from "prop-types"
-import React from "react"
+import PropTypes from "prop-types";
+import React from "react";
 
 const Header = ({ siteTitle }) => (
   <header className="header">
@@ -15,8 +15,9 @@ Header.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+// I dont think this is doing anything?
+// Header.defaultProps = {
+//   siteTitle: ``,
+// }
 
 export default Header
