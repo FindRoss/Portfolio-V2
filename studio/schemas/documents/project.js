@@ -14,6 +14,11 @@ export default {
       type: 'text'
     },
     {
+      name: 'projectUrl',
+      title: 'Project URL',
+      type: 'url'
+    },
+    {
       name: 'tool',
       title: 'Tools',
       type: 'array',

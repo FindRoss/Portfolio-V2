@@ -1,0 +1,59 @@
+.projects {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+
+  &--title h2 {
+    color: $primary-color-900;
+  }
+
+  &--list {
+    margin: 3.5rem 0;
+  }
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 2rem;
+
+  @include fromTablet {
+    grid-template-columns: 2fr 3fr 1fr;
+  }
+
+  &--title {
+    color: $primary-color-500;
+  }
+
+  &--link {
+    a {
+      display: inline-block;
+    }
+
+    @include fromTablet {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.arrow {
+  background: $secondary-color-200;
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  &:hover {
+    background: $secondary-color-100;
+  }
+
+  &--path {
+    stroke: #000;
+  }
+
+  &--svg {
+    fill: $primary-color-500;
+  }
+}

@@ -1,11 +1,17 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+
+import Arrow from './arrowSVG';
 
 const project = (p) => (
   <div className="project" key={p}>
     <h3 className="project--title">{p.name || 'no name'}</h3>
     <p className="project--description">{p.description || 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.'}</p>
-    <a href="http://google.com" target="_blank" rel="noreferrer" className="project--link">Lorem</a>
+    <div className="project--link">
+      <a href="http://google.com" target="_blank" rel="noreferrer">
+        <Arrow />
+      </a>
+    </div>
   </div>
 )
 
@@ -17,16 +23,14 @@ const Projects = ({ projects: { edges: allProjects } }) => {
   // { projects: { edges: allProjects  } }
 
   return (
-    <div className="cont">
-      <div className="projects">
-        <div className="project--col-heading">
-          <h2>Projects</h2>
-        </div>
-        <div className="projects--col-list">
-          {allProjects.map(p => project(p.node))}
-        </div>
+    <section className="projects cont">
+      <div className="projects--title">
+        <h2>Projects</h2>
       </div>
-    </div>
+      <div className="projects--list">
+        {allProjects.map(p => project(p.node))}
+      </div>
+    </section>
   )
 }
 
