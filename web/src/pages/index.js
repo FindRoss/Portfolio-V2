@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero";
 import Projects from "../components/projects";
+import Contact from "../components/contact";
 
 import Todo from "../components/todo";
 
@@ -17,6 +18,7 @@ const IndexPage = ({ data }) => {
       <Hero hero={sanityHero} />
       <Projects projects={allSanityProject} />
       <Todo />
+      <Contact />
     </Layout>
   )
 }
@@ -32,6 +34,7 @@ query MyQuery {
         id
         name
         description
+        projectUrl
       }
     }
   }

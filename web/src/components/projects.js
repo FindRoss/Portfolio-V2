@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import Arrow from './arrowSVG';
 
 const project = (p) => (
-  <div className="project" key={p}>
+  <div className="project" key={p.id}>
     <h3 className="project--title">{p.name || 'no name'}</h3>
     <p className="project--description">{p.description || 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.'}</p>
     <div className="project--link">
-      <a href="http://google.com" target="_blank" rel="noreferrer">
+      <a href={p.projectUrl || '#'} target="_blank" rel="noreferrer">
         <Arrow />
       </a>
     </div>
@@ -21,6 +21,8 @@ const Projects = ({ projects: { edges: allProjects } }) => {
   // const allProjects = projects.edges;
   // const { edges: allProjects } = projects;
   // { projects: { edges: allProjects  } }
+
+  console.log(allProjects);
 
   return (
     <section className="projects cont">

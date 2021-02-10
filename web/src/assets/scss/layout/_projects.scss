@@ -26,12 +26,13 @@
 
   &--link {
     a {
-      display: inline-block;
+      display: inline;
     }
 
     @include fromTablet {
       display: flex;
       justify-content: flex-end;
+      align-items: flex-start;
     }
   }
 }
