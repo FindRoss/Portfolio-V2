@@ -1,5 +1,5 @@
 export default {
-  title: 'Tool',
+  title: 'Tools',
   name: 'tool',
   type: 'document',
   fields: [
