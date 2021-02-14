@@ -9,6 +9,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'description',
+      type: 'text',
+      title: 'Description'
+    },
+    {
       title: 'Logo',
       name: 'logo',
       type: 'image'
