@@ -1,0 +1,9 @@
+.btn {
+  border-radius: 6px;
+  padding: 0.35rem 1rem;
+  background: linear-gradient(to right, $primary-color-500, $primary-color-800);
+  border: none;
+  color: $white-color-100;
+  font-size: 1.1rem;
+  cursor: pointer;
+}

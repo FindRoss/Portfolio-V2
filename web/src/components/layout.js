@@ -28,12 +28,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Portfolio`} />
       <div>
         <main>{children}</main>
-        <footer
-          className="cont"
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
+        <footer className="cont">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>

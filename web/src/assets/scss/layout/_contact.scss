@@ -1,0 +1,50 @@
+.contact {
+  background: $secondary-color-100;
+  padding: 6rem 0;
+  border-top: $styled-border;
+  border-bottom: $styled-border;
+
+  &--layout {
+    @include fromTablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &--message {
+      margin-bottom: 1.5rem;
+
+      @include fromTablet {
+        align-self: center;
+      }
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  margin-bottom: 0px;
+
+  &--row {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    &__label {
+      display: block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      color: $primary-color-600;
+    }
+
+    &__input {
+      width: 100%;
+      padding: 0.25rem 0.5rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  }
+}

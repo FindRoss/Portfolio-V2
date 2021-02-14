@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 3px solid #000000;
+  border-bottom: $styled-border;
 
   &--content {
     max-width: 550px;

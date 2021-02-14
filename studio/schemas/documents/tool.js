@@ -8,5 +8,10 @@ export default {
       name: 'title',
       type: 'string',
     },
+    {
+      title: 'Logo',
+      name: 'logo',
+      type: 'image'
+    }
   ]
 }

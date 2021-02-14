@@ -22,8 +22,6 @@ const Projects = ({ projects: { edges: allProjects } }) => {
   // const { edges: allProjects } = projects;
   // { projects: { edges: allProjects  } }
 
-  console.log(allProjects);
-
   return (
     <section className="projects cont">
       <div className="projects--title">

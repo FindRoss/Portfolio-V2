@@ -1,23 +1,23 @@
 import React from "react"
+import { graphql } from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero";
 import Projects from "../components/projects";
+import Tools from "../components/tools";
 import Contact from "../components/contact";
-
-import Todo from "../components/todo";
 
 const IndexPage = ({ data }) => {
 
-  const { sanityHero, allSanityProject } = data;
+  const { sanityHero, allSanityProject, allSanityTool } = data;
 
   return (
     <Layout>
       <SEO title="Portfolio" />
       <Hero hero={sanityHero} />
       <Projects projects={allSanityProject} />
-      <Todo />
+      <Tools tools={allSanityTool} />
       <Contact />
     </Layout>
   )
@@ -35,6 +35,14 @@ query MyQuery {
         name
         description
         projectUrl
+      }
+    }
+  }
+  allSanityTool {
+    edges {
+      node {
+        id
+        title
       }
     }
   }

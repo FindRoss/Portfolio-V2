@@ -1,6 +1,6 @@
 .projects {
   padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-bottom: 6rem;
 
   &--title h2 {
     color: $primary-color-900;
@@ -14,7 +14,10 @@
 .project {
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
 
   @include fromTablet {
     grid-template-columns: 2fr 3fr 1fr;
