@@ -41,8 +41,14 @@ query MyQuery {
   allSanityTool {
     edges {
       node {
-        id
         title
+        id
+        logo {
+          asset {
+            url
+          }
+        }
+        description
       }
     }
   }

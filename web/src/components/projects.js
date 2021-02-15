@@ -17,15 +17,10 @@ const project = (p) => (
 
 const Projects = ({ projects: { edges: allProjects } }) => {
 
-  // Learning destructuring.
-  // const allProjects = projects.edges;
-  // const { edges: allProjects } = projects;
-  // { projects: { edges: allProjects  } }
-
   return (
     <section className="projects cont">
       <div className="projects--title">
-        <h2>Projects</h2>
+        <h2 className="section-heading">Projects</h2>
       </div>
       <div className="projects--list">
         {allProjects.map(p => project(p.node))}

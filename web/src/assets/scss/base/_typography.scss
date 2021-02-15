@@ -1,0 +1,16 @@
+.section-heading {
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: $primary-color-600;
+  position: relative;
+  margin-left: 60px;
+
+  &::before {
+    content: " ";
+    width: 40px;
+    height: 40px;
+    left: -60px;
+    position: absolute;
+    background-image: url("./../images/heading-bullet.png");
+  }
+}
