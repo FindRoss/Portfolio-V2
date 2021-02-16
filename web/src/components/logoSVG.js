@@ -14,6 +14,7 @@ function LogoSVG(props) {
       />
     </svg>
 
+    // THICK VERSION - DOESNT LOOK SO GOOD
     // <svg
     //   width={30}
     //   height={34}
