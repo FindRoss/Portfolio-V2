@@ -1,6 +1,6 @@
 .contact {
   background: $secondary-color-100;
-  padding: 6rem 0;
+  padding: $size-900 0;
   border-top: $styled-border;
   border-bottom: $styled-border;
 
@@ -11,7 +11,7 @@
     }
 
     &--message {
-      margin-bottom: 1.5rem;
+      margin-bottom: $size-600;
 
       @include fromTablet {
         align-self: center;

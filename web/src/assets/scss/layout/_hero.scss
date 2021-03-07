@@ -21,7 +21,6 @@
   }
 
   &--title {
-    font-size: 30px;
     position: relative;
     padding-bottom: 2rem;
     margin-bottom: 1rem;
@@ -36,13 +35,5 @@
       position: absolute;
       bottom: 0;
     }
-
-    @include fromTablet {
-      font-size: 42px;
-    }
-  }
-
-  &--subtitle {
-    font-size: 1.3rem;
   }
 }

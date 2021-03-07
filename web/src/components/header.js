@@ -22,9 +22,4 @@ Header.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-// I dont think this is doing anything?
-// Header.defaultProps = {
-//   siteTitle: ``,
-// }
-
 export default Header

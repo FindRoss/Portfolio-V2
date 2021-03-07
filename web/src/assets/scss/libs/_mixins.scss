@@ -1,6 +1,6 @@
 // Breakpoints.
-$tablet-width: 768px;
-$desktop-width: 1024px;
+$tablet-width: 48em;
+$desktop-width: 64em;
 
 @mixin fromTablet {
   @media (min-width: #{$tablet-width}) {

@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero";
 import Projects from "../components/projects/index";
-import Tools from "../components/tools";
+import Tools from "../components/tools/index";
 import Contact from "../components/contact";
 
 const IndexPage = ({ data }) => {

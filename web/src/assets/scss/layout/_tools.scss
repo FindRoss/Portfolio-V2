@@ -1,32 +1,41 @@
 .tools {
-  padding-bottom: 6rem;
+  // padding-bottom: 6rem;
 
-  &--control {
+  &--header {
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 1rem;
-    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $size-400;
 
-    &__btn {
+    .tools--control {
+      display: flex;
+      justify-content: flex-end;
       cursor: pointer;
-      border: none;
-      background: transparent;
-    }
 
-    &__btn.full {
-      opacity: 0;
-    }
+      &__btn {
+        cursor: pointer;
+        border: none;
+        background: transparent;
+      }
 
-    .left {
-      margin-right: 0.5rem;
-      transform: rotate(180deg);
+      &__btn.full {
+        opacity: 0;
+      }
+
+      .left {
+        margin-right: 0.5rem;
+        transform: rotate(180deg);
+      }
     }
   }
 
   &--panel {
     overflow-x: hidden;
     display: flex;
-    margin-right: -1rem;
+
+    @include fromTablet {
+      margin-right: -1rem;
+    }
   }
 }
 
@@ -34,9 +43,11 @@
   flex-shrink: 0;
   height: auto;
   width: 250px;
-  flex-basis: calc(50% - 1rem);
+  // flex-basis: calc(50% - 1rem);
+  flex-basis: 100%;
   transition: transform 0.5s ease-in-out;
-  padding: 1rem 2rem;
+
+  padding: $size-500 $size-600;
   background: $secondary-color-100;
   border: 2px solid #000;
 
@@ -57,14 +68,13 @@
     &__image {
       margin-right: 0.5rem;
     }
-
-    &__title {
-      font-size: 1.3rem;
-      margin-bottom: 0;
-    }
   }
 
   &--description {
-    font-size: 0.9rem;
+    font-size: $size-400;
+
+    @include fromTablet {
+      font-size: inherit;
+    }
   }
 }

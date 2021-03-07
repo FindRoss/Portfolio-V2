@@ -1,0 +1,7 @@
+.post > * + * {
+  margin-top: $size-600;
+}
+
+.post :is(h2, h3) + * {
+  margin-top: $size-200;
+}

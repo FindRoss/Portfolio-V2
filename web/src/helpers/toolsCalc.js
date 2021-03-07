@@ -7,8 +7,9 @@ export const toolsCalc = () => {
   let toolWidth = tool.clientWidth;
   let marginRight = parseInt(getComputedStyle(tool).marginRight);
   let marginLeft = parseInt(getComputedStyle(tool).marginLeft);
-  let borderRight = parseInt(getComputedStyle(tool).borderRight);
-  let borderLeft = parseInt(getComputedStyle(tool).borderLeft);
+  let borderRight = parseInt(getComputedStyle(tool).borderRightWidth);
+  let borderLeft = parseInt(getComputedStyle(tool).borderLeftWidth);
+
   let totalToolWidth = toolWidth + marginLeft + marginRight + borderLeft + borderRight;
 
   // Get the number of elements. 
@@ -20,9 +21,21 @@ export const toolsCalc = () => {
   // let maxCheck = panelWidth - totalToolWidth;
   let maxCheck = panelWidth - 1;
 
+
+  // // // need to know if this is on mobile or desktop before resizing begins.. 
+  let panelsToMove = 1;
+  let tabletBreakPoint = 768;
+
+  // Get the size of the window..  
+  const windowSize = window.innerWidth;
+
+  if (windowSize > tabletBreakPoint) panelsToMove = 2;
+
+
+
   return {
     tools: allTools,
-    totalWidth: totalToolWidth * 2,
+    totalWidth: totalToolWidth * panelsToMove,
     maxCheck
   }
 }

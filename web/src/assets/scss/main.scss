@@ -4,6 +4,8 @@
 
 // Base.
 @import "base/base";
+
+// Typography.
 @import "base/typography";
 
 // Layout.
@@ -14,6 +16,11 @@
 @import "layout/tools";
 @import "layout/contact";
 @import "layout/footer";
+@import "layout/post";
+
+main > * + * {
+  margin-top: $size-900;
+}
 
 // Components.
 @import "components/button";

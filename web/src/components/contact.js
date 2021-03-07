@@ -3,7 +3,7 @@ import Form from './form';
 
 function Contact() {
   return (
-    <div className="contact">
+    <section className="contact">
       <div className="cont contact--layout">
         <div className="contact--layout__message">
           <h2 className="section-heading">Get in touch</h2>
@@ -12,7 +12,7 @@ function Contact() {
           <Form />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

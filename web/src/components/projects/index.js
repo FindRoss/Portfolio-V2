@@ -2,17 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Project from './Project';
 
-
-
-
 const Projects = ({ projects: { edges: allProjects } }) => {
   return (
     <section className="projects cont">
-      <div className="projects--title">
-        <h2 className="section-heading">Projects</h2>
-      </div>
+      <h2>Projects</h2>
       <div className="projects--list">
-        {allProjects.map(p => <Project project={p.node} />)}
+        {allProjects.map(p => <Project project={p.node} key={p.node.id} />)}
       </div>
     </section>
   )

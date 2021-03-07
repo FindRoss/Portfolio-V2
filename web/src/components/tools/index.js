@@ -1,7 +1,7 @@
 import React from 'react'
 import Tool from './tool';
-import Arrow from './arrowSVG';
-import { toolsCalc } from '../helpers/toolsCalc';
+import Arrow from '../arrowSVG';
+import { toolsCalc } from '../../helpers/toolsCalc';
 
 function Tools({ tools: { edges: tools } }) {
 
@@ -35,25 +35,29 @@ function Tools({ tools: { edges: tools } }) {
     };
 
     tools.forEach((t) => t.style.transform = `translateX(${currentPosition}px)`)
+    tools.forEach((t) => t.style.webkitTransform = `translateX(${currentPosition}px)`)
+    tools.forEach((t) => t.style.MozTransform = `translateX(${currentPosition}px)`)
+    tools.forEach((t) => t.style.msTransform = `translateX(${currentPosition}px)`)
+    tools.forEach((t) => t.style.oTransform = `translateX(${currentPosition}px)`)
   };
 
   return (
-    <div className="cont">
+    <section className="cont">
       <div className="tools">
-        <div>
-          <h2 className="section-heading">Tools</h2>
-        </div>
-        <div className="tools--control">
-          <button
-            className="tools--control__btn left"
-            onClick={handleArrowLeft}>
-            <Arrow />
-          </button>
-          <button
-            className="tools--control__btn right"
-            onClick={handleArrowRight}>
-            <Arrow />
-          </button>
+        <div className="tools--header">
+          <h2>Tools</h2>
+          <div className="tools--control">
+            <button
+              className="tools--control__btn left"
+              onClick={handleArrowLeft}>
+              <Arrow />
+            </button>
+            <button
+              className="tools--control__btn right"
+              onClick={handleArrowRight}>
+              <Arrow />
+            </button>
+          </div>
         </div>
         <div className="tools--panel">
           {tools.map(tool => (
@@ -61,7 +65,7 @@ function Tools({ tools: { edges: tools } }) {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

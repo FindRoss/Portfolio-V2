@@ -1,12 +1,20 @@
 module.exports = {
   siteMetadata: {
     title: `Ross Findlay`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Protfolio with a little about myself, and showcasing projects completed and tools learned. Built with Gatsby and Sanity.io.`,
+    author: `Testing Name`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve(`./src/templates/blog.js`)
+        }
+      }
+    },
     {
       resolve: 'gatsby-source-sanity',
       options: {
@@ -22,7 +30,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
-        // path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-sharp`,
